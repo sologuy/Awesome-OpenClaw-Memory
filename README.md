@@ -13,6 +13,7 @@
 ![](https://img.shields.io/badge/PRs-Welcome-red)
 [![Papers](https://img.shields.io/badge/Papers-2-blue.svg)](#-openclaw-related-papers)
 [![Open Source Projects](https://img.shields.io/badge/Open%20Source%20Projects-22-green.svg)](#-systems-and-open-sources)
+[![OpenClaw Plugins](https://img.shields.io/badge/OpenClaw%20Plugins-6-red.svg)](#-openclaw-memory-plugins)
 
 
 ## 👋 Introduction
@@ -55,6 +56,7 @@ This repository focuses on memory mechanisms and system designs that extend or a
 ---
 
 ## 🔔 Recent Updates
++ 2026-03-21 - 🎉 Added 5 OpenClaw memory plugins (memory-lancedb-pro, openclaw-supermemory, MemOS-Cloud, graph-memory, openclaw-memory-mem0)
 + 2026-03-21 - 🎉 Initial release with 2 OpenClaw papers, 22 open-source memory systems, and the Adam Framework
 
 ---
@@ -68,6 +70,7 @@ This repository focuses on memory mechanisms and system designs that extend or a
 - [OpenClaw Related Papers](#-openclaw-related-papers)
 - [Resource](#-resource)
   - [Systems and Open Sources](#-systems-and-open-sources)
+  - [OpenClaw Memory Plugins](#-openclaw-memory-plugins)
   - [OpenClaw Memory Frameworks](#-openclaw-memory-frameworks)
 - [Make a Contribution](#-make-a-contribution)
 - [Star Trends](#-star-trends)
@@ -177,6 +180,18 @@ Systems below are ordered by **publication date**:
 | MineContext | 2025-09-30 | ![GitHub Repo stars](https://img.shields.io/github/stars/volcengine/MineContext?style=social) | https://github.com/volcengine/MineContext<br>No official website |
 | EverMemOS   | 2025-10-29 | ![GitHub Repo stars](https://img.shields.io/github/stars/EverMind-AI/EverMemOS?style=social) | https://github.com/EverMind-AI/EverMemOS<br>https://evermind.ai/ |
 | MemoryBear  | 2025-12-17 | ![GitHub Repo stars](https://img.shields.io/github/stars/SuanmoSuanyangTechnology/MemoryBear?style=social) | https://github.com/SuanmoSuanyangTechnology/MemoryBear<br>https://www.memorybear.ai/ |
+
+### 🔌 OpenClaw Memory Plugins
+
+Plugins below are purpose-built for the OpenClaw ecosystem, ordered by **star count**:
+
+| Plugin | Stars | Description | Tech |
+|--------|-------|-------------|------|
+| [memory-lancedb-pro](https://github.com/CortexReach/memory-lancedb-pro) | ![GitHub Repo stars](https://img.shields.io/github/stars/CortexReach/memory-lancedb-pro?style=social) | Production-grade LanceDB hybrid retrieval memory — Vector + BM25 search, Cross-Encoder rerank, multi-scope isolation, management CLI | TypeScript |
+| [openclaw-supermemory](https://github.com/supermemoryai/openclaw-supermemory) | ![GitHub Repo stars](https://img.shields.io/github/stars/supermemoryai/openclaw-supermemory?style=social) | Supermemory cloud-based auto-recall memory — long-term memory and recall for OpenClaw agents | TypeScript |
+| [MemOS-Cloud-OpenClaw-Plugin](https://github.com/MemTensor/MemOS-Cloud-OpenClaw-Plugin) | ![GitHub Repo stars](https://img.shields.io/github/stars/MemTensor/MemOS-Cloud-OpenClaw-Plugin?style=social) | Official MemOS Cloud plugin — lifecycle memory with context recall before execution and conversation save after each run | JavaScript |
+| [graph-memory](https://github.com/adoresever/graph-memory) | ![GitHub Repo stars](https://img.shields.io/github/stars/adoresever/graph-memory?style=social) | Knowledge graph context engine — extracts structured triples, compresses context 75%, enables cross-session experience reuse | TypeScript |
+| [openclaw-memory-mem0](https://github.com/serenichron/openclaw-memory-mem0) | ![GitHub Repo stars](https://img.shields.io/github/stars/serenichron/openclaw-memory-mem0?style=social) | Self-hosted Mem0 REST API integration — semantic extraction memory for OpenClaw | TypeScript |
 
 ### 🧠 OpenClaw Memory Frameworks
 
