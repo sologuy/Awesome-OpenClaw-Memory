@@ -13,7 +13,7 @@
 ![](https://img.shields.io/badge/PRs-Welcome-red)
 [![Papers](https://img.shields.io/badge/Papers-2-blue.svg)](#-openclaw-related-papers)
 [![Open Source Projects](https://img.shields.io/badge/Open%20Source%20Projects-22-green.svg)](#-systems-and-open-sources)
-[![OpenClaw Plugins](https://img.shields.io/badge/OpenClaw%20Plugins-6-red.svg)](#-openclaw-memory-plugins)
+[![OpenClaw Plugins](https://img.shields.io/badge/OpenClaw%20Plugins-7-red.svg)](#-openclaw-memory-plugins)
 
 
 ## 👋 Introduction
@@ -56,6 +56,7 @@ This repository focuses on memory mechanisms and system designs that extend or a
 ---
 
 ## 🔔 Recent Updates
++ 2026-03-22 - 🎉 Added mem9 (ContextEngine-native persistent memory by PingCAP/TiDB founder)
 + 2026-03-21 - 🎉 Added 5 OpenClaw memory plugins (memory-lancedb-pro, openclaw-supermemory, MemOS-Cloud, graph-memory, openclaw-memory-mem0)
 + 2026-03-21 - 🎉 Initial release with 2 OpenClaw papers, 22 open-source memory systems, and the Adam Framework
 
@@ -189,11 +190,25 @@ Plugins below are purpose-built for the OpenClaw ecosystem, ordered by **star co
 |--------|-------|-------------|------|
 | [memory-lancedb-pro](https://github.com/CortexReach/memory-lancedb-pro) | ![GitHub Repo stars](https://img.shields.io/github/stars/CortexReach/memory-lancedb-pro?style=social) | Production-grade LanceDB hybrid retrieval memory — Vector + BM25 search, Cross-Encoder rerank, multi-scope isolation, management CLI | TypeScript |
 | [openclaw-supermemory](https://github.com/supermemoryai/openclaw-supermemory) | ![GitHub Repo stars](https://img.shields.io/github/stars/supermemoryai/openclaw-supermemory?style=social) | Supermemory cloud-based auto-recall memory — long-term memory and recall for OpenClaw agents | TypeScript |
+| [mem9](https://github.com/mem9-ai/mem9) | ![GitHub Repo stars](https://img.shields.io/github/stars/mem9-ai/mem9?style=social) | Persistent cloud memory powered by TiDB — ContextEngine lifecycle hooks, per-agent data isolation ("one claw one database"), Memory Space visualization. By Edward Huang (PingCAP/TiDB co-founder) | TypeScript, Go |
 | [MemOS-Cloud-OpenClaw-Plugin](https://github.com/MemTensor/MemOS-Cloud-OpenClaw-Plugin) | ![GitHub Repo stars](https://img.shields.io/github/stars/MemTensor/MemOS-Cloud-OpenClaw-Plugin?style=social) | Official MemOS Cloud plugin — lifecycle memory with context recall before execution and conversation save after each run | JavaScript |
 | [graph-memory](https://github.com/adoresever/graph-memory) | ![GitHub Repo stars](https://img.shields.io/github/stars/adoresever/graph-memory?style=social) | Knowledge graph context engine — extracts structured triples, compresses context 75%, enables cross-session experience reuse | TypeScript |
 | [openclaw-memory-mem0](https://github.com/serenichron/openclaw-memory-mem0) | ![GitHub Repo stars](https://img.shields.io/github/stars/serenichron/openclaw-memory-mem0?style=social) | Self-hosted Mem0 REST API integration — semantic extraction memory for OpenClaw | TypeScript |
 
 ### 🧠 OpenClaw Memory Frameworks
+
+#### mem9
+
+- **Description:** Persistent cloud memory for OpenClaw agents, powered by TiDB Cloud. Founded by Edward Huang (黄东旭), co-founder of PingCAP/TiDB. The first OpenClaw memory plugin to integrate with the **ContextEngine** lifecycle API (OpenClaw 3.7+).
+- **Key Features:**
+  - **ContextEngine Hooks**: `before_prompt_build` (inject memories before each LLM call), `before_reset` (save session summary), `agent_end` (capture final response) — participates in the full memory lifecycle, not just post-hoc recall.
+  - **"One Claw One Database"**: Per-agent isolated storage with independent encryption and keys, not row-level tenant isolation.
+  - **Memory Space**: Web-based visualization of all persisted memories at mem9.ai — transparent, inspectable memory.
+  - **Multi-Agent Support**: Claude Code, OpenCode, and OpenClaw share the same memory pool via stateless plugins + cloud server.
+  - **Self-Hostable**: Deploy mnemo-server with your own TiDB/MySQL instance for full data sovereignty.
+- **Tools**: `memory_store`, `memory_search`, `memory_get`, `memory_update`, `memory_delete`
+- **Install**: Tell your OpenClaw: `请阅读 https://mem9.ai/SKILL.md 并按照说明安装和配置 mem9`
+- **Links:** [GitHub](https://github.com/mem9-ai/mem9) | [Website](https://mem9.ai)
 
 #### Adam Framework
 
