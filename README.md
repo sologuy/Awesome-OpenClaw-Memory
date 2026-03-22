@@ -13,7 +13,7 @@
 ![](https://img.shields.io/badge/PRs-Welcome-red)
 [![Papers](https://img.shields.io/badge/Papers-2-blue.svg)](#-openclaw-related-papers)
 [![Open Source Projects](https://img.shields.io/badge/Open%20Source%20Projects-22-green.svg)](#-systems-and-open-sources)
-[![OpenClaw Plugins](https://img.shields.io/badge/OpenClaw%20Plugins-7-red.svg)](#-openclaw-memory-plugins)
+[![OpenClaw Plugins](https://img.shields.io/badge/OpenClaw%20Plugins-8-red.svg)](#-openclaw-memory-plugins)
 
 
 ## 👋 Introduction
@@ -56,6 +56,7 @@ This repository focuses on memory mechanisms and system designs that extend or a
 ---
 
 ## 🔔 Recent Updates
++ 2026-03-22 - 🎉 Added OpenViking (17K+ stars, ByteDance/Volcengine context database for AI Agents)
 + 2026-03-22 - 🎉 Added mem9 (ContextEngine-native persistent memory by PingCAP/TiDB founder)
 + 2026-03-21 - 🎉 Added 5 OpenClaw memory plugins (memory-lancedb-pro, openclaw-supermemory, MemOS-Cloud, graph-memory, openclaw-memory-mem0)
 + 2026-03-21 - 🎉 Initial release with 2 OpenClaw papers, 22 open-source memory systems, and the Adam Framework
@@ -188,6 +189,7 @@ Plugins below are purpose-built for the OpenClaw ecosystem, ordered by **star co
 
 | Plugin | Stars | Description | Tech |
 |--------|-------|-------------|------|
+| [OpenViking](https://github.com/volcengine/OpenViking) | ![GitHub Repo stars](https://img.shields.io/github/stars/volcengine/OpenViking?style=social) | Open-source context database for AI Agents by ByteDance/Volcengine — file system paradigm with L0/L1/L2 hierarchical context delivery, VikingDB vector search, self-evolving skills | Python |
 | [memory-lancedb-pro](https://github.com/CortexReach/memory-lancedb-pro) | ![GitHub Repo stars](https://img.shields.io/github/stars/CortexReach/memory-lancedb-pro?style=social) | Production-grade LanceDB hybrid retrieval memory — Vector + BM25 search, Cross-Encoder rerank, multi-scope isolation, management CLI | TypeScript |
 | [openclaw-supermemory](https://github.com/supermemoryai/openclaw-supermemory) | ![GitHub Repo stars](https://img.shields.io/github/stars/supermemoryai/openclaw-supermemory?style=social) | Supermemory cloud-based auto-recall memory — long-term memory and recall for OpenClaw agents | TypeScript |
 | [mem9](https://github.com/mem9-ai/mem9) | ![GitHub Repo stars](https://img.shields.io/github/stars/mem9-ai/mem9?style=social) | Persistent cloud memory powered by TiDB — ContextEngine lifecycle hooks, per-agent data isolation ("one claw one database"), Memory Space visualization. By Edward Huang (PingCAP/TiDB co-founder) | TypeScript, Go |
@@ -196,6 +198,17 @@ Plugins below are purpose-built for the OpenClaw ecosystem, ordered by **star co
 | [openclaw-memory-mem0](https://github.com/serenichron/openclaw-memory-mem0) | ![GitHub Repo stars](https://img.shields.io/github/stars/serenichron/openclaw-memory-mem0?style=social) | Self-hosted Mem0 REST API integration — semantic extraction memory for OpenClaw | TypeScript |
 
 ### 🧠 OpenClaw Memory Frameworks
+
+#### OpenViking
+
+- **Description:** Open-source context database for AI Agents by ByteDance/Volcengine (火山引擎). Designed specifically for OpenClaw and similar agents, with 17K+ GitHub stars.
+- **Key Features:**
+  - **File System Paradigm**: Manages agent context (memory, resources, skills) through a unified file system metaphor — hierarchical, browsable, and debuggable.
+  - **L0/L1/L2 Three-Layer Loading**: L0 (always loaded core context), L1 (on-demand directory-level context), L2 (deep retrieval from VikingDB vector search) — progressive disclosure instead of monolithic injection.
+  - **Self-Evolving Skills**: Automatically distills reusable skills from accumulated memory and interaction patterns.
+  - **Visual Memory Traces**: Directory-recursive retrieval turns memory from black-box to white-box.
+- **Backend**: VikingDB (ByteDance vector database), requires Volcengine account
+- **Links:** [GitHub](https://github.com/volcengine/OpenViking) | [Website](https://www.openviking.ai/docs)
 
 #### mem9
 
